@@ -173,7 +173,7 @@ const Dashboard = () => {
               {cargarGrap ? 
                 variablesDispositivos.map((item, index) => {
                   return (
-                    <Grid item lg={12} md={12} xl={12} xs={12}>
+                    <Grid item lg={12} md={12} xl={12} xs={12} key ={index}>
                   <Sales request ={{idDispositivo: dispositivo.idDispositivo,
                     idVariable : item,
                     fechaInicio: dispositivo.fechaInicio,
