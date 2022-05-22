@@ -27,8 +27,6 @@ const Alertas_Tabs = () => {
             aria-label="lab API tabs example">
               <Tab label="Crear Alertas" 
               value="1" />
-              <Tab label="Alertas Generadas" 
-              value="2" />
             </TabList>
           </Box>
           <TabPanel value="1"><CrearAlerta/></TabPanel>
