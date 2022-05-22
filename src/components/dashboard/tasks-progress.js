@@ -20,7 +20,7 @@ const TasksProgress = (props) => {
   },[]);
 
   function GetVariableByName(){
-    getVariableByName("Humedad").then(result  =>{
+    getVariableByName("PH Peces").then(result  =>{
       setvariable(result.data);
     })
   }

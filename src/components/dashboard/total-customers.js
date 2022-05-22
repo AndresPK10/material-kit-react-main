@@ -20,7 +20,7 @@ const TotalCustomers = (props) =>{
   },[]);
 
   function GetVariableByName(){
-    getVariableByName("PH").then(result  =>{
+    getVariableByName("PH Plantas").then(result  =>{
       setvariable(result.data);
     })
   }

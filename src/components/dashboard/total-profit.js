@@ -20,7 +20,7 @@ const TotalProfit = (props) => {
   },[]);
 
   function GetVariableByName(){
-    getVariableByName("Humedad Relativa").then(result  =>{
+    getVariableByName("Luminosidad").then(result  =>{
       setvariable(result.data);
     })
   }
