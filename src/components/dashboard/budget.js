@@ -21,7 +21,7 @@ const Budget = (props) => {
   },[]);
 
   function GetVariableByName(){
-    getVariableByName("Temperatura Tanque Plantas").then(result  =>{
+    getVariableByName("Temp Tanque Plantas").then(result  =>{
       setvariable(result.data);
     })
   }
