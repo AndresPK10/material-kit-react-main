@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //axios.defaults.baseURL = 'http://acuoponiawebapi-dev.us-east-1.elasticbeanstalk.com/Api'; //URL Produccion
-axios.defaults.baseURL ='https://localhost:7109/api'; //URL Prubas Local
+axios.defaults.baseURL ='https://app.aquaponicmetrics.online/api'; //URL Prubas Local
 axios.interceptors.request.use((config) => {
     const token_seguirdad = window.localStorage.getItem("token");
     if(token_seguirdad){
