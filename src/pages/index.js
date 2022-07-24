@@ -18,7 +18,8 @@ import  TotalProfit  from "../components/dashboard/total-profit";
 import { DashboardLayout } from "../components/dashboard-layout";
 import React, { useEffect, useState } from "react";
 import { obtenerDispositivosRegistrados } from "../actions/DispositivoAction";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {GetIdVariablesByDispositivo} from "../actions/LecturaSensorAction"
 
 const Dashboard = () => {
@@ -32,11 +33,10 @@ const Dashboard = () => {
   });
   const [cargarGrap, setcargarGrap] = useState(false);
   const [variablesDispositivos, setvariables] = useState([]);
-  const notify = (mensaje, type) =>
-    toast(mensaje, {
-      type,
-      theme: "dark",
-    });
+  const notify = (mensaje, type) => toast(mensaje, {
+    type,
+    theme:"dark"
+  });
 
   const changeSelect = (e) => {
     const { name, value } = e.target;
@@ -63,7 +63,7 @@ const Dashboard = () => {
 
   const validateForm = () => {
     if (dispositivo.fechaInicio == "" || dispositivo.fechaFinal == "") {
-      notify("El nombre de la variable no puede estar vacio", "error");
+      notify("La fecha inicial y la fecha final no pueden estar vacios", "error");
       return;
     }
 
@@ -90,7 +90,10 @@ const Dashboard = () => {
           py: 8,
         }}
       >
-        <ToastContainer position="bottom-center" autoClose={5000} />
+        <ToastContainer 
+            position="bottom-center"
+            autoClose={5000}
+        />
         <Container maxWidth={false}>
           <Grid container spacing={3}>
             <Grid item xs={12}>

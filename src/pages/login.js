@@ -6,8 +6,14 @@ import * as Yup from 'yup';
 import { Box, Button, Card, CardContent, Container, Grid, Link, TextField, Typography } from '@mui/material';
 import React, { useState } from "react";
 import { LoginUsuario } from 'src/actions/UsuarioAction';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+  const notify = (mensaje, type) => toast(mensaje, {
+    type,
+    theme:"dark"
+  });
   const router = useRouter();
   const [usuario, setUsuario] = useState({
     email:'',
@@ -31,7 +37,9 @@ const loginUsuario = () => {
             type: "INICIOSESION"
         });
     }).catch(error => {
-        console.log(error.response)
+        if( typeof(error.response) != "undefined" &&  typeof(error.response.data) != "undefined"){
+          notify(error.response.data.errores.mensaje, "error");
+        }
     })
 }
 
@@ -74,6 +82,10 @@ const loginUsuario = () => {
         }}
       >
         <Container maxWidth="sm">
+        <ToastContainer 
+            position="bottom-center"
+            autoClose={5000}
+        />
           <Card sx={{ height: '100%' }}>
             <CardContent>
                 <Box sx={{ my: 3 }}>

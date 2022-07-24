@@ -39,11 +39,6 @@ const items = [
     href: '/alertas',
     icon: (<CircleNotificationsIcon fontSize="small" />),
     title: 'Alertas'
-  },
-  {
-    href: '/settings',
-    icon: (<CogIcon fontSize="small" />),
-    title: 'Settings'
   }
 ];
 
