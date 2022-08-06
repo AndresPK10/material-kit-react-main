@@ -13,12 +13,12 @@ export const Sales = (props) => {
     nombre: ''
   });
   const setGrafica = (dataGrafica) =>{
-    setLabelsGraf(dataGrafica.lecturas.map((item) =>{return moment(item.fechaLectura).format("DD-MM-YYYY hh:mm")}));
+    setLabelsGraf(dataGrafica.lecturas.map((item) =>{return moment(item.fechaLectura).format("DD-MM-YYYY HH:mm")}));
   }
 
   const setDataGrafica = (dataGrafica) =>{
     let dataGuardar = dataGrafica.lecturas.map((item) => {return item.valor_Leido});
-    console.dir(dataGuardar);
+    //console.dir(dataGuardar);
     setDataGraf(dataGuardar);
   }
 

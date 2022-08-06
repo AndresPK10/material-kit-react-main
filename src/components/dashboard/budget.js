@@ -11,7 +11,11 @@ const Budget = (props) => {
     id_Variable : '',
     nombre: ''
   });
-  const [valorLumbral, setValorLumbral] = useState(0);
+  const [valorLumbral, setValorLumbral] = useState({
+    valorPromedio : 0,
+    valorMinimo : 0,
+    valorMaximo : 0
+  });
   useEffect(()=>{
     GetValorMostrar()
   },props.IdDispostivo);
@@ -61,8 +65,30 @@ const Budget = (props) => {
             color="textPrimary"
             variant="h4"
           >
-            {valorLumbral}
+            {valorLumbral.valorPromedio}
           </Typography>
+        </Grid>
+        <Grid item xs={12} lg={12}>
+          <Grid>
+            <Grid item xs={12} lg={12}>
+              <Typography
+                          color="textSecondary"
+                          gutterBottom
+                          variant="overline"
+              >
+                Min {valorLumbral.valorMinimo}
+              </Typography>
+            </Grid>
+            <Grid item xs={12} lg={12}>
+              <Typography
+                          color="textSecondary"
+                          gutterBottom
+                          variant="overline"
+              >
+                Max {valorLumbral.valorMaximo}
+              </Typography>
+            </Grid>
+          </Grid>
         </Grid>
         <Grid item>
           <Avatar

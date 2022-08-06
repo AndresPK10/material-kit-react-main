@@ -100,7 +100,7 @@ const Dashboard = () => {
               <Card>
                 <Container>
                   <Grid container spacing={3}>
-                    <Grid item xs={3} margin={"auto"}>
+                    <Grid item xs={12} lg={3} margin={"auto"}>
                       <Typography color="textSecondary" gutterBottom variant="overline">
                         Dispositivo
                       </Typography>
@@ -125,7 +125,7 @@ const Dashboard = () => {
                         </Select>
                       ) : null}
                     </Grid>
-                    <Grid item xs={3} margin={"auto"}>
+                    <Grid item xs={12} lg={3} margin={"auto"}>
                       <Typography color="textSecondary" gutterBottom variant="overline">
                         Fecha Inicial
                       </Typography>
@@ -138,7 +138,7 @@ const Dashboard = () => {
                         onChange={changeSelect}
                       ></TextField>
                     </Grid>
-                    <Grid item xs={3} margin={"auto"}>
+                    <Grid item xs={12} lg={3} margin={"auto"}>
                       <Typography color="textSecondary" gutterBottom variant="overline">
                         Fecha Fin
                       </Typography>
@@ -151,7 +151,7 @@ const Dashboard = () => {
                         onChange={changeSelect}
                       ></TextField>
                     </Grid>
-                    <Grid item xs={3} margin={"auto"}>
+                    <Grid item xs={12} lg={3} margin={"auto"}>
                       <Button color="primary" variant="outlined" fullWidth onClick={validateForm}>
                         Buscar
                       </Button>
